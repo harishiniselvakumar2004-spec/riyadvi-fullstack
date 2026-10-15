@@ -1,0 +1,22 @@
+const body = (...p) => p.map((t) => (t.startsWith('## ') ? { type: 'h2', text: t.slice(3) } : { type: 'p', text: t }));
+
+module.exports = [
+  { slug: 'why-3d-websites-convert', category: 'Design', tags: ['3D', 'UX', 'Performance'], featured: true, daysAgo: 3,
+    data: { title: 'Why Thoughtful 3D Is Becoming a Conversion Tool, Not a Gimmick', excerpt: 'Used with purpose, 3D helps visitors understand products faster. Here is how to do it without hurting performance.', author: 'Riyadvi Team', readTime: 6, gradient: ['#D4AF37', '#1a1205'],
+      content: body('3D on the web has matured. With WebGL widely supported and tools like React Three Fiber, interactive visuals are now practical for business sites.', '## Use 3D to explain, not decorate', 'The best 3D experiences answer a question: how does it work, what does it look like, what is inside. If the effect does not help a visitor decide, cut it.', '## Respect the device', 'Cap pixel ratio, compress textures, pause rendering off-screen and ship a static fallback for low-power phones. Visual impact should never cost usability.') } },
+  { slug: 'software-project-planning-checklist', category: 'Strategy', tags: ['Planning', 'Software'], featured: false, daysAgo: 10,
+    data: { title: 'A Practical Checklist Before You Start a Software Project', excerpt: 'Scope, budget, stakeholders and success metrics — get these right before a single line of code.', author: 'Riyadvi Team', readTime: 5, gradient: ['#8a6d1f', '#0c0c0c'],
+      content: body('Most overruns start before development: unclear goals and shifting scope.', '## Define success first', 'Write down the three metrics that would make this project a win, then design backwards.', '## Plan for change', 'Phase the roadmap, keep a prioritised backlog and review with stakeholders every sprint.') } },
+  { slug: 'nextjs-vs-wordpress', category: 'Development', tags: ['Next.js', 'WordPress', 'CMS'], featured: false, daysAgo: 18,
+    data: { title: 'Next.js or WordPress: Which Is Right for Your Business Site?', excerpt: 'A balanced look at speed, flexibility, editing experience and long-term cost.', author: 'Riyadvi Team', readTime: 7, gradient: ['#c9a24b', '#101010'],
+      content: body('Both are excellent — for different jobs.', '## Choose WordPress when', 'Content editors need familiar tooling and the design is relatively standard.', '## Choose Next.js when', 'You need custom interactions, top-tier performance or deep integrations with your own APIs.') } },
+  { slug: 'local-seo-for-clinics', category: 'Marketing', tags: ['SEO', 'Healthcare'], featured: false, daysAgo: 25,
+    data: { title: 'Local SEO Playbook for Clinics and Service Businesses', excerpt: 'Google Business Profile, reviews and landing pages that bring nearby patients to your door.', author: 'Riyadvi Team', readTime: 5, gradient: ['#e3c36a', '#14110a'],
+      content: body('Local intent converts at high rates when your presence is consistent.', '## Fix the basics', 'Consistent name, address and phone everywhere, plus a fully completed Business Profile.', '## Earn reviews', 'Ask at the moment of delight and reply to every review.') } },
+  { slug: 'designing-for-ar-on-the-web', category: 'Design', tags: ['AR/VR', '3D', 'WebXR'], featured: false, daysAgo: 34,
+    data: { title: 'Designing for AR on the Web: What Works Today', excerpt: 'WebAR lets customers preview products without an app. A realistic look at the possibilities.', author: 'Riyadvi Team', readTime: 6, gradient: ['#b8962e', '#0b0b12'],
+      content: body('WebAR removes the biggest barrier: installing an app.', '## Start with one hero product', 'Prove value with a single try-on or placement experience, then expand.', '## Keep models light', 'Aim for under 5 MB per model using Draco-compressed glTF.') } },
+  { slug: 'ai-assisted-development-workflow', category: 'Development', tags: ['AI', 'Workflow'], featured: false, daysAgo: 42,
+    data: { title: 'Using AI in Development Without Losing Control of the Code', excerpt: 'How we use AI assistants for speed while still reviewing, testing and owning every line.', author: 'Riyadvi Team', readTime: 6, gradient: ['#d4af37', '#0a0a0a'],
+      content: body('AI is a fast junior pair-programmer — it still needs a senior reviewer.', '## Prompt with context', 'Share constraints, conventions and examples; vague prompts produce generic code.', '## Always review and test', 'Read the diff, add tests, and refactor generated code into your architecture.') } },
+];
